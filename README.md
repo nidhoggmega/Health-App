@@ -12,6 +12,7 @@ This solution is designed to improve access to healthcare services by providing 
 
 ## Architecture Diagram
 
+![Unnamed File](https://github.com/nidhoggmega/Health-App/assets/92702429/ccd189a0-cd93-4dc8-9d81-20f39437b345)
 
 
 
