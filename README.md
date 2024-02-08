@@ -71,6 +71,18 @@ curl http://localhost:8081/patient-records
 
 curl -X DELETE http://localhost:8081/patient-records/{id}
 
+### 4. Build & Run the Docker Containers
+
+#### Build the Docker images for both services:
+
+docker build -t appointment-service ./appointment_service
+docker build -t patient-records-service ./patient_records_service
+
+#### Run the Docker containers:
+
+docker run -p 8080:8080 appointment-service
+docker run -p 8081:8081 patient-records-service
+
 ## Note:
 
 #### Replace placeholders such as path/to/appointment_service with actual paths when running on different devices.
