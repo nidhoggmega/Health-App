@@ -29,61 +29,60 @@ This solution is designed to improve access to healthcare services by providing 
 
 #### For "appointment_service" Microservice:
 
-## Running:
+##### Running:
 cd path/to/appointment_service
 go run main.go
 
 #### For "patient_records_service" Microservice:
 
-## Running:
+##### Running:
 cd path/to/patient_records_service
 go run main.go
 
 ### 3. Test Microservices
 
-## Testing appointment_service Microservice:
+#### Testing appointment_service Microservice:
 
-#### Create an appointment:
+##### Create an appointment:
 
 curl -X POST -H "Content-Type: application/json" -d '{"appointment": "Dentist"}' http://localhost:8080/appointments
 
-#### Retrieve all appointments:
+##### Retrieve all appointments:
 
 curl http://localhost:8080/appointments
 
-#### Delete an appointment (replace {id} with the actual appointment ID):
+##### Delete an appointment (replace {id} with the actual appointment ID):
 
 
 curl -X DELETE http://localhost:8080/appointments/{id}
 
-## Testing patient_records_service Microservice:
+#### Testing patient_records_service Microservice:
 
-#### Create a patient record:
+##### Create a patient record:
 
 curl -X POST -H "Content-Type: application/json" -d '{"patient_record": "Blood Pressure: 120/80"}' http://localhost:8081/patient-records
 
-#### Retrieve all patient records:
-
+##### Retrieve all patient records:
 
 curl http://localhost:8081/patient-records
 
-#### Delete a patient record (replace {id} with the actual record ID):
+##### Delete a patient record (replace {id} with the actual record ID):
 
 curl -X DELETE http://localhost:8081/patient-records/{id}
 
 ### 4. Build & Run the Docker Containers
 
-#### Build the Docker images for both services:
+##### Build the Docker images for both services:
 
 docker build -t appointment-service ./appointment_service
 docker build -t patient-records-service ./patient_records_service
 
-#### Run the Docker containers:
+##### Run the Docker containers:
 
 docker run -p 8080:8080 appointment-service
 docker run -p 8081:8081 patient-records-service
 
 ## Note:
 
-#### Replace placeholders such as path/to/appointment_service with actual paths when running on different devices.
-#### Make sure to replace {id} in DELETE requests with actual IDs retrieved from GET requests.
+##### Replace placeholders such as path/to/appointment_service with actual paths when running on different devices.
+##### Make sure to replace {id} in DELETE requests with actual IDs retrieved from GET requests.
