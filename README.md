@@ -72,5 +72,5 @@ curl -X DELETE http://localhost:8081/patient-records/{id}
 
 ## Note:
 
-# Replace placeholders such as path/to/appointment_service with actual paths when running on differnt devices.
-# Make sure to replace {id} in DELETE requests with actual IDs retrieved from GET requests.
+#### Replace placeholders such as path/to/appointment_service with actual paths when running on different devices.
+#### Make sure to replace {id} in DELETE requests with actual IDs retrieved from GET requests.
