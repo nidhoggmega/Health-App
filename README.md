@@ -47,14 +47,25 @@ go run main.go
 
 curl -X POST -H "Content-Type: application/json" -d '{"appointment": "Dentist"}' http://localhost:8080/appointments
 
+##### Expected Output:
+
+"Appointment created successfully"
+
 ##### Retrieve all appointments:
 
 curl http://localhost:8080/appointments
 
+##### Expected Output:
+
+"[{"id":1,"appointment":"Dentist"}]"
+
 ##### Delete an appointment (replace {id} with the actual appointment ID):
 
-
 curl -X DELETE http://localhost:8080/appointments/{id}
+
+##### Expected Output:
+
+"Appointment deleted successfully"
 
 #### Testing patient_records_service Microservice:
 
@@ -62,13 +73,23 @@ curl -X DELETE http://localhost:8080/appointments/{id}
 
 curl -X POST -H "Content-Type: application/json" -d '{"patient_record": "Blood Pressure: 120/80"}' http://localhost:8081/patient-records
 
+##### Expected Output:
+
+"Patient record created successfully"
+
 ##### Retrieve all patient records:
 
 curl http://localhost:8081/patient-records
 
+##### Expected Output:
+
+"[{"id":1,"patient_record":"Blood Pressure: 120/80"}]"
+
 ##### Delete a patient record (replace {id} with the actual record ID):
 
 curl -X DELETE http://localhost:8081/patient-records/{id}
+
+"Patient record deleted successfully"
 
 ### 4. Build & Run the Docker Containers
 
